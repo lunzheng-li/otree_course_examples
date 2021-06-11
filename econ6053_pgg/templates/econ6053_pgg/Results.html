@@ -1,0 +1,24 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Result
+{% endblock %}
+
+{% block content %}
+
+    <ul>
+        <li>Total contribution in this round: {{ group.total_contribution }}</li>
+        <li>Total earnings from the project: {{ group.total_contribution }}*1.2 = {{ total_earnings }}</li>
+        <li>Individual Share: <b>{{ group.individual_share }}</b></li>
+        <li>Your contribution: <b>{{ player.contribution }}</b></li>
+    </ul>
+    <p>
+    Therefore, your earing in the round is: {{ Constants.endowment }} - <b>{{ player.contribution }}</b> + <b>{{ group.individual_share }}</b> = {{ player.payoff }}
+    </p>
+    {% next_button %}
+    <br>
+    {% include Constants.instructions_template %}
+{% endblock %}
+
+

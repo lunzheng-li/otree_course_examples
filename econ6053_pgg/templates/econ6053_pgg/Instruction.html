@@ -1,0 +1,19 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Instructions
+{% endblock %}
+
+{% block content %}
+    {% include Constants.instructions_template %}
+    </p class="justify">
+        If you have any questions at this time, please raise your hand. 
+        If there are no questions, we will now begin the experiment.
+    </p> 
+    <p>
+    <b>Note that the instructions will remain on your screen for future reference.</b>
+    </p>
+    {% next_button %}
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Final payment
+{% endblock %}
+
+{% block content %}
+    <p> 
+        <b>Round {{ player.paying_round }}</b> is randomly selected to pay you;
+        <br><br>
+        You final payoff is <b>{{ player.final_payoff }}</b>.
+    </p>
+
+{% endblock %}
+
+

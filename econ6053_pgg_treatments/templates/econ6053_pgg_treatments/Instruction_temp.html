@@ -1,0 +1,18 @@
+{% load otree static %}
+
+<div class="card bg-light m-3">
+    <div class="card-body">
+
+    <p style="text-align: justify;">
+        In this study, you will be in a randomly formed group of <b>{{ Constants.players_per_group }} participants</b>. Participants will be in the same group through all rounds of the experiment. 
+        <br><br>
+        At the beginning of each round, all participants in the group are given <b>an endowment of {{ Constants.endowment }}</b>, and have the opportunity to contribute to a joint project. Contributions can be any amount from 0 to their endowment ({{ Constants.endowment }} in this case).
+        <br><br>
+        The earnings from the project are calculated as follows: The total contribution of all participants is multiplied by <b>a factor of {{ group.factor }}</b>, and the resulting amount is the total earnings from the project, which is <b>evenly split</b> among all {{ Constants.players_per_group }} participants. 
+        <br><br>
+        The experiment has in total <b>{{ Constants.num_rounds }} rounds</b>. We will randomly choose one round to pay you, your payoff equals <b>your earnings from the project</b>, plus <b>the amount you did not contribute</b> in that round.
+    </p>
+    </div>
+</div>
+
+

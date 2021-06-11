@@ -1,0 +1,18 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Contribution
+{% endblock %}
+
+{% block content %}
+    <p>
+        <ins>Round {{ player.round_number}} of {{ Constants.num_rounds}}</ins>
+    </p>
+    {% formfields %}
+    
+    {% next_button %}
+    <br>
+    {% include Constants.instructions_template %}
+
+{% endblock %}
